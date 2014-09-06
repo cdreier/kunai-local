@@ -1,0 +1,165 @@
+@import "global.less";
+
+#status-bar{
+  width: 100%;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 0px;
+  z-index: 999;
+  .inner{
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    @animationSpeed: 1000ms;
+    -webkit-transition: background-color @animationSpeed ease;
+    -moz-transition: background-color @animationSpeed ease;
+    -o-transition: background-color @animationSpeed ease;
+    -ms-transition: background-color @animationSpeed ease;
+    transition: background-color @animationSpeed ease;
+    
+    &.status{
+      background-color: fade(@green, 50%);
+    }
+    &.error{
+      background-color: fade(@red, 50%);
+    }
+  }
+}
+#txtForm{
+  position: relative;
+  top: -300px;
+  button{
+    img{
+      margin-right: 10px;
+    }
+    &#btn-live-mode{
+      float: left;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+    &[type=submit]{
+      float: right;
+    }
+    &.btn-blue{
+      width: 69%;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      margin-top: 10px;
+      -webkit-transition: width 300ms ;
+      -moz-transition: width 300ms ;
+      -o-transition: width 300ms ;
+      -ms-transition: width 300ms ;
+      transition: width 300ms ;
+      span{
+        font-weight: bold;
+      }
+      .static{
+        display: none;
+      }
+      &.inactive{
+        opacity: 0.5;
+        width: 29%;
+        .anim{
+          display: none;
+        }
+        .static{
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .hint{
+    color: @blue;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  
+  #history{
+    display: block;
+    width: 100%;
+    height: 0px;
+    position: relative;
+    ul{
+      position: absolute;
+      bottom: 0px;
+      padding: 0px 20px 10px;
+      margin: 0px;
+      li{
+        list-style: none;
+        display: block;
+        min-height: 20px;
+      }
+    }
+  }
+  
+}
+#loginForm{
+  height: 50px;
+  button{
+    img{
+      margin-right: 10px;
+    }
+    &.btn-blue{
+      position: relative;
+      bottom: 44px;
+      span{
+        display: inline-block;
+        height: 20px;
+        vertical-align: middle;
+        font-weight: bold;
+      }
+    }
+  }
+}
+#txt{
+  width: 100%;
+  border: 0;
+  height: 200px;
+  padding: 15px 20px;
+}
+
+#roomCode{
+  border: none;
+  background-color: @gray;
+  color: white;
+  font-weight: bold;
+  padding: 5px 20px;
+  height: 44px;
+  width: 100%;
+}
+.btn-blue{
+  border: none;
+  padding: 7px 20px;
+  text-align: center;
+  background-color:  @blue;
+  color: white;
+  font-size: 16px;
+}
+.top-wrap{
+  background-color: @bg;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 5px;
+  position: relative;
+  z-index: 99;
+}
+
+a{
+  color: @darkGray;
+  &:hover,&:focus{
+    text-decoration: none;
+    color: @darkGray;
+  }
+  &.gray-btn{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 40px;
+    text-transform: uppercase;
+    &:hover,&:focus{
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+

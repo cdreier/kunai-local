@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		
+		<title>Kunai - your easy android remote keyboard</title>
+		
+		<script type="text/javascript">
+			var LOCAL_SOCKET = '%s';
+		</script>
+
+		<script type="text/javascript" src="lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/js/socket.io.js"></script>
+
+		<script src="lib/js/script.js" type="text/javascript" charset="utf-8"></script>
+
+		<link type="text/css" rel="stylesheet" href="lib/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="lib/css/style.css" />
+
+	</head>
+
+	<body >
+
+		<div id="status-bar">
+			<div class="inner">
+				&nbsp;
+			</div>
+		</div>
+
+		<div class="container">
+			
+			
+			
+			<div class="top-wrap">
+				
+				<div class="col-md-4 col-md-offset-4" id="logo">
+					<img src="lib/img/logo_kunai.png" >
+				</div>
+				<div class="clearfix"></div>
+	
+				<form id="loginForm" role="form" class="col-md-8 col-md-offset-2">
+
+					<input type="text" id="roomCode" placeholder="Enter your code" class="">
+					<button class="btn-blue pull-right" type="submit" >
+						<img src="lib/img/icon_room.png"> 
+						<span>Join Room</span>
+					</button>
+
+				</form>
+				
+				<div class="clearfix"></div>
+			</div>
+			
+			
+			<form id="txtForm"  role="form" class="col-md-offset-2 col-md-8">
+			    
+			    <div id="history">
+			        <ul></ul>
+			    </div>
+			    
+				<textarea id="txt" ></textarea>
+				
+				<button id="btn-live-mode" class="toggleMode btn-blue inactive">
+					<img src="lib/img/icon_live_mode.gif" class="anim" >
+					<img src="lib/img/icon_live_mode.png" class="static">
+				    <span>LIVE - Mode</span>
+				</button>
+				
+				<button id="btn-send" type="submit" class="toggleMode btn-blue ">
+					<img src="lib/img/icon_send.png" >
+					<span>SEND <span class="shortcut">( CTRL+Enter )</span></span>
+				</button>
+				<div class="clearfix"></div>
+				
+				<div class="hint">You can trigger the "Enter-Key" with ALT-Enter. e.g. to send a chat-message</div>
+			</form>
+
+			
+			
+			
+			<div class="col-md-offset-2 col-md-8" id="info-btn-wrap">
+				
+				<a class="gray-btn pull-left" href="http://kunai-keyboard.net/info">
+					<img src="lib/img/btn_kunai.png" >
+					Instructions
+				</a>
+				
+				<a class="gray-btn pull-right" href="https://play.google.com/store/apps/details?id=net.drailing.kunai">
+					<img src="lib/img/btn_google_play.png" >
+				</a>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+
+</html>
